@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISA STIGs Compliance Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/enhanced-styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-shield-alt me-2"></i>Shanmugavel ComplianceSpace</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#overview">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="comparison.html">Comparison</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Frameworks
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="taa.html">TAA</a></li>
+                            <li><a class="dropdown-item" href="fedramp.html">FedRAMP</a></li>
+                            <li><a class="dropdown-item" href="fips.html">FIPS 140-2</a></li>
+                            <li><a class="dropdown-item" href="cmmc.html">CMMC</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="itar.html">ITAR</a></li>
+                            <li><a class="dropdown-item" href="hipaa.html">HIPAA</a></li>
+                            <li><a class="dropdown-item" href="gdpr.html">GDPR</a></li>
+                            <li><a class="dropdown-item" href="nist800-53.html">NIST 800-53</a></li>
+                            <li><a class="dropdown-item" href="nist800-171.html">NIST 800-171</a></li>
+                            <li><a class="dropdown-item active" href="disa-stigs.html">DISA STIGs</a></li>
+                            <li><a class="dropdown-item" href="pci-dss.html">PCI DSS</a></li>
+                            <li><a class="dropdown-item" href="enisa.html">ENISA</a></li>
+                            <li><a class="dropdown-item" href="defstan.html">DEFSTAN</a></li>
+                            <li><a class="dropdown-item" href="iso15408.html">ISO/IEC 15408</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="regions.html">Regions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="competitors.html">Competitors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manageengine.html">ManageEngine</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card shadow mb-5">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-4">
+                            <div class="icon-box mb-3">
+                                <i class="fas fa-shield-alt fa-3x text-primary"></i>
+                            </div>
+                            <h1 class="display-5 fw-bold">Defense Information Systems Agency Security Technical Implementation Guides (DISA STIGs)</h1>
+                            <p class="lead">Comprehensive Guide to DISA STIGs Compliance</p>
+                        </div>
+
+                        <h2>What are DISA STIGs?</h2>
+                        <p>Security Technical Implementation Guides (STIGs) are the configuration standards for DOD IA and IA-enabled devices/systems. Since 1998, DISA has played a critical role enhancing the security posture of DOD's security systems by providing STIGs. The STIGs contain technical guidance to "lock down" information systems/software that might otherwise be vulnerable to a malicious computer attack.</p>
+                        
+                        <div class="alert alert-info">
+                            <h4><i class="fas fa-info-circle"></i> Key Facts About DISA STIGs</h4>
+                            <ul>
+                                <li><strong>Governing Body:</strong> Defense Information Systems Agency (DISA)</li>
+                                <li><strong>Primary Region:</strong> United States Department of Defense (DoD)</li>
+                                <li><strong>Established:</strong> 1998</li>
+                                <li><strong>Update Frequency:</strong> Quarterly updates</li>
+                                <li><strong>Scope:</strong> Security requirements for all Information Systems used within DoD</li>
+                            </ul>
+                        </div>
+                        
+                        <h2>STIG Categories and Severities</h2>
+                        <p>DISA STIGs organize security controls into three categories based on their potential impact:</p>
+                        
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                                <thead class="table-primary">
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Description</th>
+                                        <th>Impact</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="badge bg-danger">CAT I</span></td>
+                                        <td>High Severity</td>
+                                        <td>Vulnerabilities that could result in loss of confidentiality, availability, or integrity.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="badge bg-warning text-dark">CAT II</span></td>
+                                        <td>Medium Severity</td>
+                                        <td>Vulnerabilities that could result in loss of confidentiality, availability, or integrity, but the risk is less severe than Category I.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="badge bg-success">CAT III</span></td>
+                                        <td>Low Severity</td>
+                                        <td>Vulnerabilities that degrade measures to protect against loss of confidentiality, availability, or integrity.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <h2>DISA STIG Types</h2>
+                        <p>DISA provides STIGs for a wide range of technologies, including:</p>
+                        
+                        <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-header bg-primary text-white">
+                                        <h5 class="mb-0">Operating Systems</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>Microsoft Windows (Various versions)</li>
+                                            <li>Red Hat Enterprise Linux</li>
+                                            <li>Ubuntu</li>
+                                            <li>macOS</li>
+                                            <li>IBM z/OS</li>
+                                            <li>Oracle Solaris</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-header bg-primary text-white">
+                                        <h5 class="mb-0">Network Devices</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>Cisco IOS</li>
+                                            <li>Juniper</li>
+                                            <li>Palo Alto Networks</li>
+                                            <li>Firewalls</li>
+                                            <li>Routers</li>
+                                            <li>Switches</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-header bg-primary text-white">
+                                        <h5 class="mb-0">Applications</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>Microsoft Office</li>
+                                            <li>Web Browsers</li>
+                                            <li>Adobe Acrobat</li>
+                                            <li>Database Management Systems</li>
+                                            <li>Web Servers</li>
+                                            <li>Email Servers</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-header bg-primary text-white">
+                                        <h5 class="mb-0">Virtualization</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>VMware ESXi</li>
+                                            <li>Microsoft Hyper-V</li>
+                                            <li>Containers</li>
+                                            <li>Cloud Computing Platforms</li>
+                                            <li>Virtual Desktop Infrastructure</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h2>STIG Implementation Process</h2>
+                        <p>Implementing STIGs typically follows these steps:</p>
+                        
+                        <div class="card mb-4 border-primary">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="mb-0">Implementation Steps</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="implementation-steps">
+                                    <div class="step">
+                                        <h4>1. Identify Applicable STIGs</h4>
+                                        <p>Determine which STIGs apply to your environment based on the technologies in use. DISA provides STIGs for various operating systems, applications, network devices, and other technologies.</p>
+                                    </div>
+                                    
+                                    <div class="step">
+                                        <h4>2. Download STIGs</h4>
+                                        <p>Obtain the latest STIGs from the DoD Cyber Exchange website, which requires a valid login (either a CAC or a Public account). STIGs are available in various formats including XCCDF, XML, checklist, and VMS.</p>
+                                    </div>
+                                    
+                                    <div class="step">
+                                        <h4>3. Asset Classification</h4>
+                                        <p>Classify your assets based on their security requirements and mission criticality to determine which STIG controls should be applied.</p>
+                                    </div>
+                                    
+                                    <div class="step">
+                                        <h4>4. Risk Assessment and Tailoring</h4>
+                                        <p>Perform a risk assessment to determine which STIG requirements are applicable to your environment. Document any deviations or exceptions with appropriate justification.</p>
+                                    </div>
+                                    
+                                    <div class="step">
+                                        <h4>5. Implementation Planning</h4>
+                                        <p>Develop a detailed implementation plan that addresses scheduling, resource allocation, testing procedures, and rollback strategies.</p>
+                                    </div>
+                                    
+                                    <div class="step">
+                                        <h4>6. Implementation Execution</h4>
+                                        <p>Apply the STIG settings to systems, starting with test environments before moving to production. Use automation tools where possible to streamline the process.</p>
+                                    </div>
+                                    
+                                    <div class="step">
+                                        <h4>7. Validation</h4>
+                                        <p>Verify that systems are functioning correctly after applying STIGs and that all required security controls are implemented correctly.</p>
+                                    </div>
+                                    
+                                    <div class="step">
+                                        <h4>8. Documentation</h4>
+                                        <p>Document all implemented controls, exceptions, and deviations with appropriate justifications. Maintain this documentation for audits and reviews.</p>
+                                    </div>
+                                    
+                                    <div class="step">
+                                        <h4>9. Ongoing Compliance Monitoring</h4>
+                                        <p>Establish continuous monitoring to ensure continued compliance with STIG requirements. Implement automated scanning where possible.</p>
+                                    </div>
+                                    
+                                    <div class="step">
+                                        <h4>10. Update Management</h4>
+                                        <p>Regularly review and apply STIG updates as they are released (typically quarterly) to address new vulnerabilities and security concerns.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h2>STIG Implementation Tools</h2>
+                        <p>Various tools can assist with implementing, assessing, and maintaining STIG compliance:</p>
+                        
+                        <div class="card mb-4 border-primary">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="mb-0">Tools and Utilities</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered">
+                                        <thead class="table-info">
+                                            <tr>
+                                                <th>Tool</th>
+                                                <th>Description</th>
+                                                <th>Usage</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>STIG Viewer</td>
+                                                <td>DISA's official tool for viewing and managing STIGs</td>
+                                                <td>Reviewing STIG content, generating checklists, documenting compliance status</td>
+                                            </tr>
+                                            <tr>
+                                                <td>SCC (SCAP Compliance Checker)</td>
+                                                <td>Evaluates systems for STIG compliance using SCAP content</td>
+                                                <td>Scanning systems for compliance, generating reports</td>
+                                            </tr>
+                                            <tr>
+                                                <td>STIGpy</td>
+                                                <td>Python-based automation tool for STIG implementation</td>
+                                                <td>Automated STIG remediation for Linux systems</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Group Policy Objects (GPOs)</td>
+                                                <td>Microsoft Windows feature for centralized policy management</td>
+                                                <td>Implementing Windows STIGs across domains</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ansible</td>
+                                                <td>Configuration management and automation platform</td>
+                                                <td>Automated STIG implementation across multiple systems</td>
+                                            </tr>
+                                            <tr>
+                                                <td>PowerSTIG</td>
+                                                <td>PowerShell module for implementing STIGs</td>
+                                                <td>Automated implementation of Windows STIGs</td>
+                                            </tr>
+                                            <tr>
+                                                <td>OpenSCAP</td>
+                                                <td>Open-source SCAP framework</td>
+                                                <td>Scanning and remediation for Linux systems</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h2>STIG vs. CIS Benchmarks</h2>
+                        <p>While STIGs and CIS Benchmarks both provide security configuration guidelines, they have some key differences:</p>
+                        
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                                <thead class="table-primary">
+                                    <tr>
+                                        <th>Aspect</th>
+                                        <th>DISA STIGs</th>
+                                        <th>CIS Benchmarks</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Origin</td>
+                                        <td>Department of Defense (DoD)</td>
+                                        <td>Center for Internet Security (CIS)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Primary Audience</td>
+                                        <td>DoD systems and contractors</td>
+                                        <td>General organizations across industries</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Accessibility</td>
+                                        <td>Requires DoD Cyber Exchange account</td>
+                                        <td>Freely available to the public</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Strictness</td>
+                                        <td>Generally more stringent</td>
+                                        <td>Offers tiered approach (Level 1 and Level 2)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Update Frequency</td>
+                                        <td>Quarterly</td>
+                                        <td>Varies by benchmark</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Format</td>
+                                        <td>XML, XCCDF, checklists</td>
+                                        <td>PDF, automated scripts</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <h2>Benefits of STIG Implementation</h2>
+                        <p>Implementing STIGs offers several advantages:</p>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card mb-3 border-success">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fas fa-shield-alt text-success me-2"></i>Enhanced Security Posture</h5>
+                                        <p class="card-text">STIGs represent security best practices developed by DoD security experts, significantly reducing the attack surface.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card mb-3 border-success">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fas fa-check-circle text-success me-2"></i>Compliance with Federal Requirements</h5>
+                                        <p class="card-text">Mandatory for DoD systems and often required for contractors working with government agencies.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card mb-3 border-success">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fas fa-sitemap text-success me-2"></i>Standardization</h5>
+                                        <p class="card-text">Provides a consistent security baseline across diverse IT environments.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card mb-3 border-success">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fas fa-search text-success me-2"></i>Risk Assessment Framework</h5>
+                                        <p class="card-text">Helps identify and prioritize security vulnerabilities based on severity categorization.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Shanmugavel ComplianceSpace</h5>
+                    <p>Comprehensive information on compliance frameworks and requirements.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Overview</a></li>
+                        <li><a href="comparison.html" class="text-white">Comparison</a></li>
+                        <li><a href="frameworks.html" class="text-white">Frameworks</a></li>
+                        <li><a href="regions.html" class="text-white">Regions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="competitors.html" class="text-white">Competitors</a></li>
+                        <li><a href="manageengine.html" class="text-white">ManageEngine</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2025 Shanmugavel ComplianceSpace. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

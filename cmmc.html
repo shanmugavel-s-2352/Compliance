@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMMC Compliance Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/enhanced-styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-shield-alt me-2"></i>Shanmugavel ComplianceSpace</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#overview">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="comparison.html">Comparison</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Frameworks
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="taa.html">TAA</a></li>
+                            <li><a class="dropdown-item" href="fedramp.html">FedRAMP</a></li>
+                            <li><a class="dropdown-item" href="fips.html">FIPS 140-2</a></li>
+                            <li><a class="dropdown-item active" href="cmmc.html">CMMC</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="itar.html">ITAR</a></li>
+                            <li><a class="dropdown-item" href="hipaa.html">HIPAA</a></li>
+                            <li><a class="dropdown-item" href="gdpr.html">GDPR</a></li>
+                            <li><a class="dropdown-item" href="nist800-53.html">NIST 800-53</a></li>
+                            <li><a class="dropdown-item" href="nist800-171.html">NIST 800-171</a></li>
+                            <li><a class="dropdown-item" href="disa-stigs.html">DISA STIGs</a></li>
+                            <li><a class="dropdown-item" href="pci-dss.html">PCI DSS</a></li>
+                            <li><a class="dropdown-item" href="enisa.html">ENISA</a></li>
+                            <li><a class="dropdown-item" href="defstan.html">DEFSTAN</a></li>
+                            <li><a class="dropdown-item" href="iso15408.html">ISO/IEC 15408</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="regions.html">Regions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="competitors.html">Competitors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manageengine.html">ManageEngine</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card shadow mb-5">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-4">
+                            <div class="icon-box mb-3">
+                                <i class="fas fa-shield-alt fa-3x text-primary"></i>
+                            </div>
+                            <h1 class="display-5 fw-bold">Cybersecurity Maturity Model Certification (CMMC)</h1>
+                            <p class="lead">Comprehensive Guide to CMMC Compliance</p>
+                        </div>
+
+                        <h2>Introduction to CMMC</h2>
+                        <p>The Cybersecurity Maturity Model Certification (CMMC) is a unified standard developed by the Department of Defense (DoD) to enhance the protection of sensitive information within the Defense Industrial Base (DIB). Introduced to address the growing cybersecurity threats facing defense contractors, CMMC establishes a framework that assesses and enhances the cybersecurity posture of companies that handle Federal Contract Information (FCI) and Controlled Unclassified Information (CUI).</p>
+
+                        <h2>What Does CMMC Compliance Mean?</h2>
+                        <p>CMMC compliance means that an organization has implemented the cybersecurity practices and processes required at a specific CMMC level and has undergone the appropriate assessment to verify this implementation. Unlike previous self-attestation models, CMMC requires third-party certification for most levels, ensuring that defense contractors actually implement the cybersecurity controls they claim to have in place.</p>
+
+                        <div class="alert alert-info mb-4">
+                            <h4><i class="fas fa-history me-2"></i>Evolution of CMMC</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>CMMC 1.0</h5>
+                                    <p>The original model introduced in 2020 featured five maturity levels with 171 practices across 17 domains.</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>CMMC 2.0</h5>
+                                    <p>Streamlined in November 2021, CMMC 2.0 simplified the framework to three levels, aligned more closely with NIST standards, and introduced a mix of self-assessment and third-party assessment options.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2>Key CMMC 2.0 Compliance Requirements</h2>
+                        
+                        <div class="card mb-4 border-primary">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="mb-0">1. CMMC Levels and Requirements</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card h-100">
+                                            <div class="card-header bg-success text-white">
+                                                <h4 class="mb-0">Level 1: Foundational</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <p><strong>Focus:</strong> Basic safeguarding of Federal Contract Information (FCI)</p>
+                                                <p><strong>Requirements:</strong> 17 security practices aligned with FAR clause 52.204-21</p>
+                                                <p><strong>Assessment:</strong> Annual self-assessment with affirmation by company leadership</p>
+                                                <p><strong>Examples of practices:</strong></p>
+                                                <ul>
+                                                    <li>Limit information system access to authorized users</li>
+                                                    <li>Identify system users and processes</li>
+                                                    <li>Use FIPS-validated encryption for sensitive information</li>
+                                                    <li>Control physical access to systems</li>
+                                                    <li>Perform periodic scans and real-time monitoring</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card h-100">
+                                            <div class="card-header bg-warning text-dark">
+                                                <h4 class="mb-0">Level 2: Advanced</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <p><strong>Focus:</strong> Protection of Controlled Unclassified Information (CUI)</p>
+                                                <p><strong>Requirements:</strong> 110 security practices aligned with NIST SP 800-171</p>
+                                                <p><strong>Assessment Options:</strong></p>
+                                                <ul>
+                                                    <li>Annual self-assessment with affirmation for select programs (lower risk)</li>
+                                                    <li>Third-party assessment by C3PAO every three years (higher risk)</li>
+                                                </ul>
+                                                <p><strong>Examples of additional practices:</strong></p>
+                                                <ul>
+                                                    <li>Multi-factor authentication</li>
+                                                    <li>Incident response capabilities</li>
+                                                    <li>Security awareness training</li>
+                                                    <li>System and information integrity</li>
+                                                    <li>Audit and accountability measures</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card h-100">
+                                            <div class="card-header bg-danger text-white">
+                                                <h4 class="mb-0">Level 3: Expert</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <p><strong>Focus:</strong> Protection of CUI against advanced persistent threats</p>
+                                                <p><strong>Requirements:</strong> 110+ security practices from NIST SP 800-171 plus additional practices from NIST SP 800-172</p>
+                                                <p><strong>Assessment:</strong> Government-led assessment by the Defense Industrial Base Cybersecurity Assessment Center (DIBCAC) every three years</p>
+                                                <p><strong>Examples of additional practices:</strong></p>
+                                                <ul>
+                                                    <li>Advanced security operations capabilities</li>
+                                                    <li>Custom security controls for specific threats</li>
+                                                    <li>Specialized cybersecurity training</li>
+                                                    <li>Sophisticated threat hunting</li>
+                                                    <li>Supply chain risk management</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4 border-primary">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="mb-0">2. Protected Information Types</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="card h-100">
+                                            <div class="card-header bg-info text-white">
+                                                <h4 class="mb-0">Federal Contract Information (FCI)</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li>Information not intended for public release</li>
+                                                    <li>Provided by or generated for the government under contract</li>
+                                                    <li>Excludes simple transactional information</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card h-100">
+                                            <div class="card-header bg-info text-white">
+                                                <h4 class="mb-0">Controlled Unclassified Information (CUI)</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>Information that requires safeguarding or dissemination controls, designated by a government agency. Categories include:</p>
+                                                <ul>
+                                                    <li>Critical infrastructure</li>
+                                                    <li>Defense</li>
+                                                    <li>Export control</li>
+                                                    <li>Financial</li>
+                                                    <li>Intelligence</li>
+                                                    <li>Law enforcement</li>
+                                                    <li>Legal</li>
+                                                    <li>Privacy</li>
+                                                    <li>Procurement and acquisition</li>
+                                                    <li>Proprietary business information</li>
+                                                    <li>Technical information</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4 border-primary">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="mb-0">3. Assessment and Certification Process</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card h-100">
+                                            <div class="card-header bg-success text-white">
+                                                <h4 class="mb-0">Self-Assessment</h4>
+                                                <p class="mb-0 small">(Level 1 and select Level 2)</p>
+                                            </div>
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li>Organization evaluates its own implementation of required practices</li>
+                                                    <li>Company leadership affirms compliance</li>
+                                                    <li>Results submitted to the DoD's Supplier Performance Risk System (SPRS)</li>
+                                                    <li>Annual renewal required</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card h-100">
+                                            <div class="card-header bg-warning text-dark">
+                                                <h4 class="mb-0">Third-Party Assessment</h4>
+                                                <p class="mb-0 small">(Level 2 and Level 3)</p>
+                                                <ul>
+                                                    <li>Conducted by Certified Third-Party Assessment Organizations (C3PAOs)</li>
+                                                    <li>Focuses on higher-risk programs</li>
+                                                    <li>Results submitted to the DoD</li>
+                                                    <li>Renewal every three years</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2>Conclusion</h2>
+                        <p>Achieving CMMC compliance is essential for organizations working with the DoD. By adhering to the requirements outlined in this guide, companies can ensure the protection of sensitive information and maintain their eligibility for defense contracts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Shanmugavel ComplianceSpace</h5>
+                    <p>Comprehensive information on compliance frameworks and requirements.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Overview</a></li>
+                        <li><a href="comparison.html" class="text-white">Comparison</a></li>
+                        <li><a href="frameworks.html" class="text-white">Frameworks</a></li>
+                        <li><a href="regions.html" class="text-white">Regions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="competitors.html" class="text-white">Competitors</a></li>
+                        <li><a href="manageengine.html" class="text-white">ManageEngine</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2025 Shanmugavel ComplianceSpace. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

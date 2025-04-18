@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, nofollow">
+    <title>Shanmugavel ComplianceSpace | ISO/IEC 15408 Compliance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/enhanced-styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        .standard-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .standard-logo {
+            width: 60px;
+            height: 60px;
+            margin-right: 20px;
+            padding: 10px;
+            background: rgba(var(--primary-rgb), 0.1);
+            border-radius: 10px;
+        }
+        
+        .region-flag {
+            width: 30px;
+            height: 20px;
+            margin-left: 15px;
+            vertical-align: middle;
+            border-radius: 3px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .requirements-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9em;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .requirements-table thead tr {
+            background: var(--gradient-primary);
+            color: white;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        .requirements-table th,
+        .requirements-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #dddddd;
+        }
+        
+        .requirements-table tbody tr {
+            transition: all 0.3s ease;
+        }
+        
+        .requirements-table tbody tr:nth-of-type(even) {
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+        
+        .requirements-table tbody tr:hover {
+            background-color: rgba(var(--primary-rgb), 0.05);
+        }
+        
+        .requirements-table tbody tr:last-of-type {
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .implementation-steps {
+            counter-reset: step-counter;
+            margin: 30px 0;
+        }
+        
+        .step {
+            position: relative;
+            padding: 20px 20px 20px 70px;
+            margin-bottom: 15px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .step:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .step::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 36px;
+            height: 36px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .info-box {
+            background: rgba(var(--primary-rgb), 0.05);
+            border-left: 4px solid var(--primary-color);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .info-box h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-shield-alt me-2"></i>Shanmugavel ComplianceSpace</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#overview">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="comparison.html">Comparison</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Frameworks
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="taa.html">TAA</a></li>
+                            <li><a class="dropdown-item" href="fedramp.html">FedRAMP</a></li>
+                            <li><a class="dropdown-item" href="fips.html">FIPS 140-2</a></li>
+                            <li><a class="dropdown-item" href="cmmc.html">CMMC</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="itar.html">ITAR</a></li>
+                            <li><a class="dropdown-item" href="hipaa.html">HIPAA</a></li>
+                            <li><a class="dropdown-item" href="gdpr.html">GDPR</a></li>
+                            <li><a class="dropdown-item" href="nist800-53.html">NIST 800-53</a></li>
+                            <li><a class="dropdown-item" href="nist800-171.html">NIST 800-171</a></li>
+                            <li><a class="dropdown-item" href="disa-stigs.html">DISA STIGs</a></li>
+                            <li><a class="dropdown-item" href="pci-dss.html">PCI DSS</a></li>
+                            <li><a class="dropdown-item" href="enisa.html">ENISA</a></li>
+                            <li><a class="dropdown-item" href="defstan.html">DEFSTAN</a></li>
+                            <li><a class="dropdown-item active" href="iso15408.html">ISO/IEC 15408</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="regions.html">Regions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="competitors.html">Competitors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manageengine.html">ManageEngine</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="desktopcentral.html">DesktopCentral</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-primary text-white text-center py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h1 class="display-4">ISO/IEC 15408 Compliance</h1>
+                    <p class="lead">Common Criteria for Information Technology Security Evaluation</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card bg-light text-dark">
+                        <div class="card-body text-center">
+                            <img src="images/iso_icon.svg" alt="ISO/IEC 15408 Icon" class="img-fluid mb-3" style="max-width: 100px;">
+                            <h4>Common Criteria</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>ISO/IEC 15408 Compliance</h2>
+                <p>Common Criteria for Information Technology Security Evaluation</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="standard-header">
+                <img src="images/compliance_icon.svg" alt="ISO/IEC 15408 Logo" class="standard-logo">
+                <div>
+                    <h2>ISO/IEC 15408 <img src="images/flags/global.svg" alt="Global Standard" class="region-flag"></h2>
+                    <p>Common Criteria for IT Security Evaluation</p>
+                </div>
+            </div>
+            
+            <h3>What is ISO/IEC 15408 (Common Criteria)?</h3>
+            <p>ISO/IEC 15408, commonly known as Common Criteria (CC), is an international standard for computer security certification. It provides a framework for specifying security functional and assurance requirements for IT products and systems. Common Criteria serves as a basis for evaluating the security properties of these products through a standardized approach that is recognized globally.</p>
+            
+            <div class="info-box">
+                <h4>Key Facts About ISO/IEC 15408</h4>
+                <ul>
+                    <li><strong>Governing Body:</strong> International Organization for Standardization (ISO) and International Electrotechnical Commission (IEC)</li>
+                    <li><strong>Primary Region:</strong> Global (recognized by 31 countries under the Common Criteria Recognition Arrangement)</li>
+                    <li><strong>Legal Authority:</strong> Voluntary standard, but often required for government procurement</li>
+                    <li><strong>Compliance Requirement:</strong> Product-specific certification through formal evaluation</li>
+                    <li><strong>Focus Areas:</strong> IT product security, security assurance, protection profiles</li>
+                </ul>
+            </div>
+            
+            <h3>Common Criteria Recognition Arrangement (CCRA)</h3>
+            <p>The Common Criteria Recognition Arrangement (CCRA) is an international agreement that establishes a framework for mutual recognition of Common Criteria certifications among participating countries. This means that a product certified in one CCRA member country is recognized as certified in all other member countries, eliminating the need for multiple evaluations.</p>
+            
+            <p>Current CCRA member countries include:</p>
+            <ul>
+                <li>Australia, Austria, Canada, Czech Republic, Denmark, Finland, France, Germany, Greece, Hungary, India, Israel, Italy, Japan, Malaysia, Netherlands, New Zealand, Norway, Pakistan, Qatar, Republic of Korea, Singapore, Spain, Sweden, Turkey, United Kingdom, United States</li>
+            </ul>
+            
+            <h3>Common Criteria Structure</h3>
+            <p>The Common Criteria standard consists of three parts:</p>
+            
+            <table class="requirements-table">
+                <thead>
+                    <tr>
+                        <th>Part</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Part 1</td>
+                        <td>Introduction and General Model</td>
+                        <td>Provides an overview of the CC, defines general concepts and principles, and explains how to select appropriate security requirements</td>
+                    </tr>
+                    <tr>
+                        <td>Part 2</td>
+                        <td>Security Functional Requirements</td>
+                        <td>Establishes a set of functional components as a standard way of expressing security requirements for IT products</td>
+                    </tr>
+                    <tr>
+                        <td>Part 3</td>
+                        <td>Security Assurance Requirements</td>
+                        <td>Establishes a set of assurance components as a standard way of expressing assurance requirements for IT products</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Key Concepts in Common Criteria</h3>
+            
+            <h4>Protection Profile (PP)</h4>
+            <p>A Protection Profile is an implementation-independent set of security requirements for a category of products that meet specific consumer needs. PPs are created to allow consumers or communities of interest to express their security needs without being tied to specific implementations.</p>
+            
+            <h4>Security Target (ST)</h4>
+            <p>A Security Target is a document that identifies the security properties of a specific product. It includes the security functional and assurance requirements that the product claims to meet, and it forms the basis for evaluation.</p>
+            
+            <h4>Target of Evaluation (TOE)</h4>
+            <p>The Target of Evaluation is the actual product or system being evaluated. The TOE can be a complete product, a part of a product, or a set of products.</p>
+            
+            <h4>Evaluation Assurance Level (EAL)</h4>
+            <p>Evaluation Assurance Levels define the depth and rigor of an evaluation. There are seven levels, with EAL1 being the most basic and EAL7 being the most stringent:</p>
+            
+            <table class="requirements-table">
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>Description</th>
+                        <th>Typical Applications</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>EAL1</td>
+                        <td>Functionally Tested</td>
+                        <td>Products where some confidence in correct operation is required but threats are not serious</td>
+                    </tr>
+                    <tr>
+                        <td>EAL2</td>
+                        <td>Structurally Tested</td>
+                        <td>Products requiring low to moderate level of independently assured security</td>
+                    </tr>
+                    <tr>
+                        <td>EAL3</td>
+                        <td>Methodically Tested and Checked</td>
+                        <td>Products requiring moderate level of independently assured security with thorough investigation</td>
+                    </tr>
+                    <tr>
+                        <td>EAL4</td>
+                        <td>Methodically Designed, Tested, and Reviewed</td>
+                        <td>Products requiring moderate to high level of independently assured security for commercial products</td>
+                    </tr>
+                    <tr>
+                        <td>EAL5</td>
+                        <td>Semiformally Designed and Tested</td>
+                        <td>Products requiring high level of independently assured security in a planned development environment</td>
+                    </tr>
+                    <tr>
+                        <td>EAL6</td>
+                        <td>Semiformally Verified Design and Tested</td>
+                        <td>Products for high-risk situations where the value of protected assets justifies additional cost</td>
+                    </tr>
+                    <tr>
+                        <td>EAL7</td>
+                        <td>Formally Verified Design and Tested</td>
+                        <td>Products for extremely high-risk situations and high-value assets</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="info-box">
+                <h4>Note on EAL Levels</h4>
+                <p>Under the current CCRA, mutual recognition is limited to certifications up to EAL2 (and EAL4 for certain Protection Profiles). Higher EAL certifications may be issued by individual countries but are not automatically recognized by other CCRA members.</p>
+            </div>
+            
+            <h3>Security Functional Requirements (SFRs)</h3>
+            <p>Common Criteria Part 2 defines a comprehensive set of security functional requirements organized into classes, families, and components. These SFRs are used to express the security functionality that a product must provide.</p>
+            
+            <table class="requirements-table">
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Description</th>
+                        <th>Example Families</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>FAU: Security Audit</td>
+                        <td>Requirements for recognizing, recording, storing, and analyzing security-relevant activities</td>
+                        <td>FAU_GEN (Audit data generation), FAU_SAR (Audit review)</td>
+                    </tr>
+                    <tr>
+                        <td>FCO: Communication</td>
+                        <td>Requirements for ensuring the identity of parties involved in data exchange</td>
+                        <td>FCO_NRO (Non-repudiation of origin), FCO_NRR (Non-repudiation of receipt)</td>
+                    </tr>
+                    <tr>
+                        <td>FCS: Cryptographic Support</td>
+                        <td>Requirements for cryptographic key management and operations</td>
+                        <td>FCS_CKM (Cryptographic key management), FCS_COP (Cryptographic operation)</td>
+                    </tr>
+                    <tr>
+                        <td>FDP: User Data Protection</td>
+                        <td>Requirements for protecting user data</td>
+                        <td>FDP_ACC (Access control policy), FDP_IFC (Information flow control policy)</td>
+                    </tr>
+                    <tr>
+                        <td>FIA: Identification and Authentication</td>
+                        <td>Requirements for verifying the claimed identity of users</td>
+                        <td>FIA_UAU (User authentication), FIA_UID (User identification)</td>
+                    </tr>
+                    <tr>
+                        <td>FMT: Security Management</td>
+                        <td>Requirements for managing security attributes, data, and functions</td>
+                        <td>FMT_MSA (Management of security attributes), FMT_SMR (Security management roles)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Shanmugavel ComplianceSpace</h5>
+                    <p>Comprehensive information on compliance frameworks and requirements.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Overview</a></li>
+                        <li><a href="comparison.html" class="text-white">Comparison</a></li>
+                        <li><a href="frameworks.html" class="text-white">Frameworks</a></li>
+                        <li><a href="regions.html" class="text-white">Regions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="competitors.html" class="text-white">Competitors</a></li>
+                        <li><a href="manageengine.html" class="text-white">ManageEngine</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2025 Shanmugavel ComplianceSpace. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

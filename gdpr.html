@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDPR Compliance Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/enhanced-styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-shield-alt me-2"></i>Shanmugavel ComplianceSpace</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#overview">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="comparison.html">Comparison</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Frameworks
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="taa.html">TAA</a></li>
+                            <li><a class="dropdown-item" href="fedramp.html">FedRAMP</a></li>
+                            <li><a class="dropdown-item" href="fips.html">FIPS 140-2</a></li>
+                            <li><a class="dropdown-item" href="cmmc.html">CMMC</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="itar.html">ITAR</a></li>
+                            <li><a class="dropdown-item" href="hipaa.html">HIPAA</a></li>
+                            <li><a class="dropdown-item active" href="gdpr.html">GDPR</a></li>
+                            <li><a class="dropdown-item" href="nist800-53.html">NIST 800-53</a></li>
+                            <li><a class="dropdown-item" href="nist800-171.html">NIST 800-171</a></li>
+                            <li><a class="dropdown-item" href="disa-stigs.html">DISA STIGs</a></li>
+                            <li><a class="dropdown-item" href="pci-dss.html">PCI DSS</a></li>
+                            <li><a class="dropdown-item" href="enisa.html">ENISA</a></li>
+                            <li><a class="dropdown-item" href="defstan.html">DEFSTAN</a></li>
+                            <li><a class="dropdown-item" href="iso15408.html">ISO/IEC 15408</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="regions.html">Regions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="competitors.html">Competitors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manageengine.html">ManageEngine</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card shadow mb-5">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-4">
+                            <div class="icon-box mb-3">
+                                <i class="fas fa-lock fa-3x text-primary"></i>
+                            </div>
+                            <h1 class="display-5 fw-bold">General Data Protection Regulation (GDPR)</h1>
+                            <p class="lead">Comprehensive Guide to GDPR Compliance</p>
+                        </div>
+
+                        <h2>What is GDPR?</h2>
+                        <p>The General Data Protection Regulation (GDPR) is a comprehensive data protection and privacy regulation in the European Union (EU) and the European Economic Area (EEA). It addresses the transfer of personal data outside the EU and EEA areas and enhances individuals' control and rights over their personal data.</p>
+                        
+                        <div class="alert alert-info">
+                            <h4><i class="fas fa-info-circle"></i> Key Facts About GDPR</h4>
+                            <ul>
+                                <li><strong>Governing Body:</strong> European Union</li>
+                                <li><strong>Effective Date:</strong> May 25, 2018</li>
+                                <li><strong>Geographic Scope:</strong> European Union and European Economic Area, plus organizations worldwide that process EU residents' data</li>
+                                <li><strong>Penalties:</strong> Up to €20 million or 4% of global annual revenue, whichever is higher</li>
+                                <li><strong>UK Equivalent:</strong> UK GDPR (post-Brexit)</li>
+                            </ul>
+                        </div>
+                        
+                        <h2>Core Principles of GDPR</h2>
+                        <p>GDPR is built on seven key principles that organizations must adhere to when processing personal data:</p>
+                        
+                        <div class="card mb-4 border-primary">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="mb-0">GDPR Principles</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <h4><i class="fas fa-balance-scale text-primary me-2"></i>Lawfulness, Fairness, and Transparency</h4>
+                                            <p>Personal data must be processed lawfully, fairly, and in a transparent manner.</p>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <h4><i class="fas fa-bullseye text-primary me-2"></i>Purpose Limitation</h4>
+                                            <p>Data must be collected for specified, explicit, and legitimate purposes and not processed in a manner incompatible with those purposes.</p>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <h4><i class="fas fa-compress-alt text-primary me-2"></i>Data Minimization</h4>
+                                            <p>Personal data must be adequate, relevant, and limited to what is necessary for the purposes for which it is processed.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <h4><i class="fas fa-check-circle text-primary me-2"></i>Accuracy</h4>
+                                            <p>Personal data must be accurate and, where necessary, kept up to date.</p>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <h4><i class="fas fa-calendar-alt text-primary me-2"></i>Storage Limitation</h4>
+                                            <p>Data must be kept in a form that permits identification of data subjects for no longer than necessary.</p>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <h4><i class="fas fa-shield-alt text-primary me-2"></i>Integrity and Confidentiality</h4>
+                                            <p>Data must be processed in a manner that ensures appropriate security, including protection against unauthorized or unlawful processing and accidental loss, destruction, or damage.</p>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <h4><i class="fas fa-tasks text-primary me-2"></i>Accountability</h4>
+                                            <p>The data controller is responsible for demonstrating compliance with all of the above principles.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h2>Key Components of GDPR Compliance</h2>
+                        <p>To achieve GDPR compliance, organizations must address several critical components:</p>
+                        
+                        <div class="accordion" id="gdprAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="dataSubjectRights">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <i class="fas fa-user-shield me-2"></i> Data Subject Rights
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="dataSubjectRights" data-bs-parent="#gdprAccordion">
+                                    <div class="accordion-body">
+                                        <p>GDPR grants individuals several specific rights regarding their personal data:</p>
+                                        <ul>
+                                            <li><strong>Right to be informed:</strong> Individuals have the right to know how their data is being collected, processed, and stored, and for what purposes.</li>
+                                            <li><strong>Right of access:</strong> Individuals can request access to their personal data and information about how it's being processed.</li>
+                                            <li><strong>Right to rectification:</strong> Individuals can request that inaccurate or incomplete data be corrected.</li>
+                                            <li><strong>Right to erasure (right to be forgotten):</strong> Individuals can request the deletion of their personal data when there is no legitimate reason for its continued processing.</li>
+                                            <li><strong>Right to restrict processing:</strong> Individuals can request that an organization limits the way it uses their personal data.</li>
+                                            <li><strong>Right to data portability:</strong> Individuals can obtain and reuse their personal data across different services.</li>
+                                            <li><strong>Right to object:</strong> Individuals can object to the processing of their data for particular purposes, including direct marketing.</li>
+                                            <li><strong>Rights related to automated decision making and profiling:</strong> Individuals have the right not to be subject to decisions based solely on automated processing that produce legal or similarly significant effects.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="legalBasis">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <i class="fas fa-gavel me-2"></i> Legal Basis for Processing
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="legalBasis" data-bs-parent="#gdprAccordion">
+                                    <div class="accordion-body">
+                                        <p>Under GDPR, organizations must have a valid legal basis for processing personal data. There are six lawful bases:</p>
+                                        <ul>
+                                            <li><strong>Consent:</strong> The individual has given clear consent for processing their personal data for a specific purpose.</li>
+                                            <li><strong>Contract:</strong> Processing is necessary for a contract with the individual or to take steps at their request before entering into a contract.</li>
+                                            <li><strong>Legal obligation:</strong> Processing is necessary to comply with a legal obligation.</li>
+                                            <li><strong>Vital interests:</strong> Processing is necessary to protect someone's life.</li>
+                                            <li><strong>Public task:</strong> Processing is necessary for performing a task in the public interest or for official functions.</li>
+                                            <li><strong>Legitimate interests:</strong> Processing is necessary for legitimate interests pursued by the controller or a third party, unless these interests are overridden by the individual's interests or rights.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="consentRequirements">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <i class="fas fa-check-double me-2"></i> Consent Requirements
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="consentRequirements" data-bs-parent="#gdprAccordion">
+                                    <div class="accordion-body">
+                                        <p>When relying on consent as a legal basis for processing, GDPR sets strict requirements:</p>
+                                        <ul>
+                                            <li><strong>Freely given:</strong> Individuals must have a genuine choice and control over how their data is used.</li>
+                                            <li><strong>Specific:</strong> Consent must be separate for different types of processing.</li>
+                                            <li><strong>Informed:</strong> Individuals must be clearly informed about what they're consenting to.</li>
+                                            <li><strong>Unambiguous:</strong> Consent requires a clear affirmative action (pre-checked boxes or inactivity does not constitute consent).</li>
+                                            <li><strong>Withdrawable:</strong> It must be as easy to withdraw consent as it is to give it.</li>
+                                            <li><strong>Documented:</strong> Organizations must keep records of how and when consent was obtained.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="dataBreaches">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        <i class="fas fa-exclamation-triangle me-2"></i> Data Breach Notification
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="dataBreaches" data-bs-parent="#gdprAccordion">
+                                    <div class="accordion-body">
+                                        <p>GDPR includes strict data breach notification requirements:</p>
+                                        <ul>
+                                            <li><strong>Notification to supervisory authority:</strong> Organizations must report certain types of personal data breaches to the relevant supervisory authority within 72 hours of becoming aware of the breach.</li>
+                                            <li><strong>Notification to affected individuals:</strong> When a breach is likely to result in a high risk to the rights and freedoms of individuals, organizations must inform those affected without undue delay.</li>
+                                            <li><strong>Documentation:</strong> All breaches must be documented, including the facts relating to the breach, its effects, and the remedial action taken.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="dpiaDpo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        <i class="fas fa-clipboard-list me-2"></i> DPIAs and DPOs
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="dpiaDpo" data-bs-parent="#gdprAccordion">
+                                    <div class="accordion-body">
+                                        <h5>Data Protection Impact Assessments (DPIAs)</h5>
+                                        <p>Organizations must conduct DPIAs when processing is likely to result in a high risk to individuals. A DPIA must include:</p>
+                                        <ul>
+                                            <li>A systematic description of the processing operations and purposes</li>
+                                            <li>An assessment of the necessity and proportionality of the processing</li>
+                                            <li>An assessment of the risks to individuals</li>
+                                            <li>The measures in place to address those risks</li>
+                                        </ul>
+                                        
+                                        <h5 class="mt-3">Data Protection Officers (DPOs)</h5>
+                                        <p>Some organizations are required to appoint a DPO. This is mandatory when:</p>
+                                        <ul>
+                                            <li>The processing is carried out by a public authority</li>
+                                            <li>The core activities require regular and systematic monitoring of individuals on a large scale</li>
+                                            <li>The core activities consist of large-scale processing of special categories of data or data relating to criminal convictions</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="dataTransfers">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        <i class="fas fa-globe me-2"></i> International Data Transfers
+                                    </button>
+                                </h2>
+                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="dataTransfers" data-bs-parent="#gdprAccordion">
+                                    <div class="accordion-body">
+                                        <p>GDPR restricts transfers of personal data outside the EU/EEA unless:</p>
+                                        <ul>
+                                            <li><strong>Adequacy decision:</strong> The European Commission has decided that the third country ensures an adequate level of protection.</li>
+                                            <li><strong>Appropriate safeguards:</strong> Such as standard contractual clauses (SCCs), binding corporate rules (BCRs), approved codes of conduct, or certification mechanisms.</li>
+                                            <li><strong>Specific derogations:</strong> For example, explicit consent, necessity for contract performance, or important reasons of public interest.</li>
+                                        </ul>
+                                        <p>Note: Following the Schrems II decision, organizations must conduct transfer impact assessments and implement supplementary measures when transferring data to countries without adequate protection.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h2 class="mt-4">Steps to Achieve GDPR Compliance</h2>
+                        <p>Implementing GDPR compliance involves several key steps:</p>
+                        
+                        <div class="card mb-4 border-primary">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="mb-0">Implementation Steps</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="implementation-steps">
+                                    <div class="step">
+                                        <h4>1. Data Mapping and Inventory</h4>
+                                        <p>Identify all personal data your organization processes, where it comes from, who it's shared with, and how long it's kept.</p>
+                                    </div>
+                                    
+                                    <div class="step">
+                                        <h4>2. Privacy Notices and Policies</h4>
+                                        <p>Update your privacy notices and policies to be transparent about how you collect and use personal data.</p>
+                                    </div>
+                                    
+                                    <div class="step">
+                                        <h4>3. Data Subject Rights Procedures</h4>
+                                        <p>Establish procedures to handle data subject requests within the required timeframe.</p>
+                                    </div>
+                                    
+                                    <div class="step">
+                                        <h4>4. Lawful Basis Assessment</h4>
+                                        <p>Identify and document the lawful basis for all processing activities.</p>
+                                    </div>
+                                    
+                                    <div class="step">
+                                        <h4>5. Consent Mechanisms</h4>
+                                        <p>Implement mechanisms to obtain, record, and manage consent that meet GDPR standards.</p>
+                                    </div>
+                                    
+                                    <div class="step">
+                                        <h4>6. Data Protection Impact Assessments</h4>
+                                        <p>Develop processes for conducting DPIAs when required.</p>
+                                    </div>
+                                    
+                                    <div class="step">
+                                        <h4>7. Data Security Measures</h4>
+                                        <p>Implement appropriate technical and organizational measures to protect personal data.</p>
+                                    </div>
+                                    
+                                    <div class="step">
+                                        <h4>8. Data Breach Response Plan</h4>
+                                        <p>Create a data breach response plan to ensure breaches are detected, reported, and remediated appropriately.</p>
+                                    </div>
+                                    
+                                    <div class="step">
+                                        <h4>9. Vendor Management</h4>
+                                        <p>Review and update contracts with data processors to include GDPR-required provisions.</p>
+                                    </div>
+                                    
+                                    <div class="step">
+                                        <h4>10. Staff Training</h4>
+                                        <p>Train staff on GDPR requirements and data protection best practices.</p>
+                                    </div>
+                                    
+                                    <div class="step">
+                                        <h4>11. Documentation</h4>
+                                        <p>Maintain comprehensive documentation of all data processing activities and compliance measures.</p>
+                                    </div>
+                                    
+                                    <div class="step">
+                                        <h4>12. Ongoing Compliance Monitoring</h4>
+                                        <p>Establish processes for regular review and continuous improvement of GDPR compliance measures.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h2>GDPR vs. Other Privacy Regulations</h2>
+                        <p>How GDPR compares to other major privacy regulations:</p>
+                        
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                                <thead class="table-primary">
+                                    <tr>
+                                        <th>Aspect</th>
+                                        <th>GDPR (EU)</th>
+                                        <th>CCPA/CPRA (California)</th>
+                                        <th>PIPEDA (Canada)</th>
+                                        <th>APPI (Japan)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Scope</td>
+                                        <td>Applies to all organizations processing EU residents' data</td>
+                                        <td>Applies to for-profit businesses meeting specific thresholds</td>
+                                        <td>Applies to all private-sector organizations</td>
+                                        <td>Applies to business operators handling personal information</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Consent Requirements</td>
+                                        <td>Strict explicit consent requirements</td>
+                                        <td>Right to opt-out of data sales</td>
+                                        <td>Consent must be meaningful</td>
+                                        <td>Consent required for third-party transfers</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Data Subject Rights</td>
+                                        <td>Comprehensive rights (access, deletion, portability, etc.)</td>
+                                        <td>More limited rights (access, deletion, opt-out)</td>
+                                        <td>Access and correction rights</td>
+                                        <td>Access, correction, and deletion rights</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Penalties</td>
+                                        <td>Up to €20M or 4% of global annual revenue</td>
+                                        <td>$2,500-$7,500 per violation</td>
+                                        <td>Limited to court-awarded damages</td>
+                                        <td>Up to ¥100M or 1% of annual sales</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Shanmugavel ComplianceSpace</h5>
+                    <p>Comprehensive information on compliance frameworks and requirements.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Overview</a></li>
+                        <li><a href="comparison.html" class="text-white">Comparison</a></li>
+                        <li><a href="frameworks.html" class="text-white">Frameworks</a></li>
+                        <li><a href="regions.html" class="text-white">Regions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="competitors.html" class="text-white">Competitors</a></li>
+                        <li><a href="manageengine.html" class="text-white">ManageEngine</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2025 Shanmugavel ComplianceSpace. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
