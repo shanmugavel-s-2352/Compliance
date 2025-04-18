@@ -1,0 +1,217 @@
+/* Custom Styles for Compliance Website */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    padding-top: 56px;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #2c3e50;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Card Styles */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    padding: 1rem;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.25rem;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+/* Region Selection Styles */
+.region-btn {
+    margin-bottom: 0.5rem;
+    min-width: 120px;
+}
+
+.region-content {
+    display: none;
+}
+
+.region-content.active {
+    display: block;
+}
+
+/* Framework Card Styles */
+.framework-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.framework-card .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.framework-card .btn {
+    margin-top: auto;
+}
+
+/* Comparison Table Styles */
+.comparison-table th, .comparison-table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.comparison-table th:first-child, .comparison-table td:first-child {
+    text-align: left;
+}
+
+/* Table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation styles */
+nav {
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .region-btn {
+        min-width: 100px;
+        font-size: 0.9rem;
+        padding: 0.375rem 0.75rem;
+    }
+    
+    .framework-icon {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

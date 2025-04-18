@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FedRAMP Compliance Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/enhanced-styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-shield-alt me-2"></i>Shanmugavel ComplianceSpace</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#overview">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="comparison.html">Comparison</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Frameworks
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="taa.html">TAA</a></li>
+                            <li><a class="dropdown-item active" href="fedramp.html">FedRAMP</a></li>
+                            <li><a class="dropdown-item" href="fips.html">FIPS 140-2</a></li>
+                            <li><a class="dropdown-item" href="cmmc.html">CMMC</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="itar.html">ITAR</a></li>
+                            <li><a class="dropdown-item" href="hipaa.html">HIPAA</a></li>
+                            <li><a class="dropdown-item" href="gdpr.html">GDPR</a></li>
+                            <li><a class="dropdown-item" href="nist800-53.html">NIST 800-53</a></li>
+                            <li><a class="dropdown-item" href="nist800-171.html">NIST 800-171</a></li>
+                            <li><a class="dropdown-item" href="disa-stigs.html">DISA STIGs</a></li>
+                            <li><a class="dropdown-item" href="pci-dss.html">PCI DSS</a></li>
+                            <li><a class="dropdown-item" href="enisa.html">ENISA</a></li>
+                            <li><a class="dropdown-item" href="defstan.html">DEFSTAN</a></li>
+                            <li><a class="dropdown-item" href="iso15408.html">ISO/IEC 15408</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="regions.html">Regions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="competitors.html">Competitors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manageengine.html">ManageEngine</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card shadow mb-5">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-4">
+                            <div class="icon-box mb-3">
+                                <i class="fas fa-cloud fa-3x text-primary"></i>
+                            </div>
+                            <h1 class="display-5 fw-bold">Federal Risk and Authorization Management Program (FedRAMP)</h1>
+                            <p class="lead">Comprehensive Guide to FedRAMP Compliance</p>
+                        </div>
+
+                        <h2>Introduction to FedRAMP</h2>
+                        <p>The Federal Risk and Authorization Management Program (FedRAMP) is a government-wide program established in 2011 to standardize the approach to security assessment, authorization, and continuous monitoring for cloud products and services used by federal agencies. As cloud adoption continues to grow across government, FedRAMP provides a cost-effective, risk-based approach to cloud service adoption and security.</p>
+
+                        <h2>What Does FedRAMP Compliance Mean?</h2>
+                        <p>FedRAMP compliance means that a Cloud Service Provider (CSP) has undergone a rigorous security assessment process and has been authorized to provide cloud services to federal agencies. This authorization confirms that the CSP meets the stringent security requirements established by the National Institute of Standards and Technology (NIST) and has implemented the necessary controls to protect federal data.</p>
+
+                        <h2>Key FedRAMP Compliance Requirements</h2>
+                        
+                        <div class="card mb-4 border-primary">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="mb-0">1. The Authorization Process</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>FedRAMP compliance follows a structured authorization process consisting of four main steps:</p>
+                                
+                                <h4>Readiness Assessment</h4>
+                                <ul>
+                                    <li>Evaluate existing security controls against FedRAMP requirements</li>
+                                    <li>Identify and address gaps in security posture</li>
+                                    <li>Develop a System Security Plan (SSP) outlining security controls</li>
+                                    <li>Prepare for formal assessment</li>
+                                </ul>
+                                
+                                <h4>Security Assessment</h4>
+                                <ul>
+                                    <li>Engage with an accredited Third-Party Assessment Organization (3PAO)</li>
+                                    <li>Undergo comprehensive security testing and evaluation</li>
+                                    <li>Address vulnerabilities identified during assessment</li>
+                                    <li>Produce a Security Assessment Report (SAR)</li>
+                                </ul>
+                                
+                                <h4>Joint Authorization Board (JAB) Authorization</h4>
+                                <ul>
+                                    <li>Submit security documentation to the JAB</li>
+                                    <li>JAB review of security posture and risk level</li>
+                                    <li>Receive Provisional Authority to Operate (P-ATO) if approved</li>
+                                    <li>Listed on the FedRAMP Marketplace as JAB authorized</li>
+                                </ul>
+                                
+                                <h4>Agency Authorization</h4>
+                                <ul>
+                                    <li>Work with specific federal agency for authorization</li>
+                                    <li>Agency review of security documentation</li>
+                                    <li>Receive Authority to Operate (ATO) from the agency</li>
+                                    <li>Listed on the FedRAMP Marketplace as agency authorized</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4 border-primary">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="mb-0">2. Security Control Implementation</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>FedRAMP requires implementation of security controls based on NIST Special Publication 800-53, categorized into:</p>
+                                
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h4>Technical Controls</h4>
+                                        <ul>
+                                            <li>Access control mechanisms</li>
+                                            <li>Identification and authentication systems</li>
+                                            <li>Audit and accountability measures</li>
+                                            <li>System and communications protection</li>
+                                            <li>System and information integrity safeguards</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h4>Operational Controls</h4>
+                                        <ul>
+                                            <li>Security awareness and training</li>
+                                            <li>Configuration management</li>
+                                            <li>Incident response capabilities</li>
+                                            <li>Maintenance procedures</li>
+                                            <li>System and information integrity</li>
+                                            <li>Media protection</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h4>Management Controls</h4>
+                                        <ul>
+                                            <li>Security assessment and authorization</li>
+                                            <li>Planning and risk assessment</li>
+                                            <li>System and services acquisition</li>
+                                            <li>Program management</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4 border-primary">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="mb-0">3. Impact Levels and Control Baselines</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>FedRAMP defines three impact levels based on FIPS 199, each with progressively more stringent security requirements:</p>
+                                
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card h-100">
+                                            <div class="card-header bg-success text-white">
+                                                <h4 class="mb-0">Low Impact</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <p><strong>125 security controls</strong></p>
+                                                <p>Applies to systems where loss of confidentiality, integrity, or availability would have limited adverse effect</p>
+                                                <p>Suitable for public-facing websites and applications with non-sensitive data</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card h-100">
+                                            <div class="card-header bg-warning text-dark">
+                                                <h4 class="mb-0">Moderate Impact</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <p><strong>325 security controls</strong></p>
+                                                <p>Applies to systems where loss would have serious adverse effect</p>
+                                                <p>Most common level for federal systems, covering non-classified but sensitive data</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card h-100">
+                                            <div class="card-header bg-danger text-white">
+                                                <h4 class="mb-0">High Impact</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <p><strong>421 security controls</strong></p>
+                                                <p>Applies to systems where loss would have severe or catastrophic adverse effect</p>
+                                                <p>Required for systems with highly sensitive data critical to government operations</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4 border-primary">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="mb-0">4. Continuous Monitoring Requirements</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>FedRAMP authorization is not a one-time achievement but requires ongoing monitoring:</p>
+                                <ul>
+                                    <li>Monthly vulnerability scanning</li>
+                                    <li>Annual security control assessments</li>
+                                    <li>Annual penetration testing</li>
+                                    <li>Regular Plan of Action and Milestones (POA&M) updates</li>
+                                    <li>Incident reporting and response</li>
+                                    <li>Configuration management and change control</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h2>Exceptions and Special Considerations</h2>
+                        
+                        <div class="alert alert-info">
+                            <h4><i class="fas fa-info-circle"></i> FedRAMP Tailored</h4>
+                            <p>A streamlined process for Low-Impact Software as a Service (SaaS) offerings that allows for a more efficient authorization path for services that present a lower risk to federal agencies.</p>
+                        </div>
+                        
+                        <div class="alert alert-info">
+                            <h4><i class="fas fa-info-circle"></i> FedRAMP Connect</h4>
+                            <p>A program that prioritizes CSPs for JAB authorization based on government-wide demand, applicability across agencies, and security risk.</p>
+                        </div>
+                        
+                        <div class="alert alert-info">
+                            <h4><i class="fas fa-info-circle"></i> Agency-Specific Requirements</h4>
+                            <p>Some agencies may impose additional security requirements beyond the FedRAMP baseline based on their specific mission needs and risk tolerance.</p>
+                        </div>
+
+                        <h2>Consequences of Non-Compliance</h2>
+                        
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="card h-100 border-danger">
+                                    <div class="card-header bg-danger text-white">
+                                        <h3 class="mb-0">Business Impact</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>Inability to sell cloud services to federal agencies</li>
+                                            <li>Loss of existing federal contracts</li>
+                                            <li>Removal from the FedRAMP Marketplace</li>
+                                            <li>Competitive disadvantage in the govern
+(Content truncated due to size limit. Use line ranges to read in chunks)

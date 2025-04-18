@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENISA Compliance Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/enhanced-styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .standard-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .standard-logo {
+            width: 60px;
+            height: 60px;
+            margin-right: 20px;
+            padding: 10px;
+            background: rgba(var(--primary-rgb), 0.1);
+            border-radius: 10px;
+        }
+        
+        .region-flag {
+            width: 30px;
+            height: 20px;
+            margin-left: 15px;
+            vertical-align: middle;
+            border-radius: 3px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .requirements-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9em;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .requirements-table thead tr {
+            background: var(--gradient-primary);
+            color: white;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        .requirements-table th,
+        .requirements-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #dddddd;
+        }
+        
+        .requirements-table tbody tr {
+            transition: all 0.3s ease;
+        }
+        
+        .requirements-table tbody tr:nth-of-type(even) {
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+        
+        .requirements-table tbody tr:hover {
+            background-color: rgba(var(--primary-rgb), 0.05);
+        }
+        
+        .requirements-table tbody tr:last-of-type {
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .implementation-steps {
+            counter-reset: step-counter;
+            margin: 30px 0;
+        }
+        
+        .step {
+            position: relative;
+            padding: 20px 20px 20px 70px;
+            margin-bottom: 15px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .step:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .step::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 36px;
+            height: 36px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .info-box {
+            background: rgba(var(--primary-rgb), 0.05);
+            border-left: 4px solid var(--primary-color);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .info-box h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-shield-alt me-2"></i>Shanmugavel ComplianceSpace</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#overview">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="comparison.html">Comparison</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Frameworks
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="taa.html">TAA</a></li>
+                            <li><a class="dropdown-item" href="fedramp.html">FedRAMP</a></li>
+                            <li><a class="dropdown-item" href="fips.html">FIPS 140-2</a></li>
+                            <li><a class="dropdown-item" href="cmmc.html">CMMC</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="itar.html">ITAR</a></li>
+                            <li><a class="dropdown-item" href="hipaa.html">HIPAA</a></li>
+                            <li><a class="dropdown-item" href="gdpr.html">GDPR</a></li>
+                            <li><a class="dropdown-item" href="nist800-53.html">NIST 800-53</a></li>
+                            <li><a class="dropdown-item" href="nist800-171.html">NIST 800-171</a></li>
+                            <li><a class="dropdown-item" href="disa-stigs.html">DISA STIGs</a></li>
+                            <li><a class="dropdown-item" href="pci-dss.html">PCI DSS</a></li>
+                            <li><a class="dropdown-item active" href="enisa.html">ENISA</a></li>
+                            <li><a class="dropdown-item" href="defstan.html">DEFSTAN</a></li>
+                            <li><a class="dropdown-item" href="iso15408.html">ISO/IEC 15408</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="regions.html">Regions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="competitors.html">Competitors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manageengine.html">ManageEngine</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="card shadow mb-5">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-4">
+                            <div class="icon-box mb-3">
+                                <i class="fas fa-shield-alt fa-3x text-primary"></i>
+                            </div>
+                            <h1 class="display-5 fw-bold">ENISA Compliance</h1>
+                            <p class="lead">European Union Agency for Cybersecurity Standards and Frameworks</p>
+                        </div>
+
+                        <div class="standard-header">
+                            <img src="images/compliance_icon.svg" alt="ENISA Logo" class="standard-logo">
+                            <div>
+                                <h2>ENISA <img src="images/flags/eu.svg" alt="European Union" class="region-flag"></h2>
+                                <p>European Union Agency for Cybersecurity</p>
+                            </div>
+                        </div>
+                        
+                        <h3>What is ENISA?</h3>
+                        <p>The European Union Agency for Cybersecurity (ENISA) is the EU's agency dedicated to achieving a high common level of cybersecurity across Europe. Established in 2004, ENISA works closely with Member States and the private sector to deliver advice and solutions as well as improving the trustworthiness of ICT products, services, and processes through cybersecurity certification schemes.</p>
+                        
+                        <div class="info-box">
+                            <h4>Key Facts About ENISA</h4>
+                            <ul>
+                                <li><strong>Governing Body:</strong> European Union</li>
+                                <li><strong>Primary Region:</strong> European Union Member States</li>
+                                <li><strong>Legal Authority:</strong> Regulation (EU) 2019/881 (Cybersecurity Act)</li>
+                                <li><strong>Compliance Requirement:</strong> Varies by scheme; some voluntary, some mandatory</li>
+                                <li><strong>Focus Areas:</strong> Cybersecurity certification, critical infrastructure protection, incident response, cybersecurity exercises, and awareness</li>
+                            </ul>
+                        </div>
+                        
+                        <h3>ENISA's Role in EU Cybersecurity</h3>
+                        <p>ENISA plays several key roles in the European cybersecurity landscape:</p>
+                        
+                        <table class="requirements-table">
+                            <thead>
+                                <tr>
+                                    <th>Role</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Expertise</td>
+                                    <td>Provides independent advice, analysis, and information on cybersecurity</td>
+                                </tr>
+                                <tr>
+                                    <td>Certification</td>
+                                    <td>Develops and maintains the European Cybersecurity Certification Framework</td>
+                                </tr>
+                                <tr>
+                                    <td>Operational Cooperation</td>
+                                    <td>Supports operational cooperation among Member States, EU institutions, and international stakeholders</td>
+                                </tr>
+                                <tr>
+                                    <td>Capacity Building</td>
+                                    <td>Assists Member States and EU institutions in strengthening cybersecurity capabilities</td>
+                                </tr>
+                                <tr>
+                                    <td>Awareness Raising</td>
+                                    <td>Enhances awareness of cybersecurity issues for citizens and organizations</td>
+                                </tr>
+                                <tr>
+                                    <td>Market Monitoring</td>
+                                    <td>Analyzes trends in the cybersecurity market to better address EU needs</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <!-- ... existing code for the rest of the content ... -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section added -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Shanmugavel ComplianceSpace</h5>
+                    <p>Comprehensive information on compliance frameworks and requirements.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Overview</a></li>
+                        <li><a href="comparison.html" class="text-white">Comparison</a></li>
+                        <li><a href="frameworks.html" class="text-white">Frameworks</a></li>
+                        <li><a href="regions.html" class="text-white">Regions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="competitors.html" class="text-white">Competitors</a></li>
+                        <li><a href="manageengine.html" class="text-white">ManageEngine</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2025 Shanmugavel ComplianceSpace. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

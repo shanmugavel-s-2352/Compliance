@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIPS 140-2 Compliance Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/enhanced-styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-shield-alt me-2"></i>Shanmugavel ComplianceSpace</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#overview">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="comparison.html">Comparison</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Frameworks
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="taa.html">TAA</a></li>
+                            <li><a class="dropdown-item" href="fedramp.html">FedRAMP</a></li>
+                            <li><a class="dropdown-item active" href="fips.html">FIPS 140-2</a></li>
+                            <li><a class="dropdown-item" href="cmmc.html">CMMC</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="itar.html">ITAR</a></li>
+                            <li><a class="dropdown-item" href="hipaa.html">HIPAA</a></li>
+                            <li><a class="dropdown-item" href="gdpr.html">GDPR</a></li>
+                            <li><a class="dropdown-item" href="nist800-53.html">NIST 800-53</a></li>
+                            <li><a class="dropdown-item" href="nist800-171.html">NIST 800-171</a></li>
+                            <li><a class="dropdown-item" href="disa-stigs.html">DISA STIGs</a></li>
+                            <li><a class="dropdown-item" href="pci-dss.html">PCI DSS</a></li>
+                            <li><a class="dropdown-item" href="enisa.html">ENISA</a></li>
+                            <li><a class="dropdown-item" href="defstan.html">DEFSTAN</a></li>
+                            <li><a class="dropdown-item" href="iso15408.html">ISO/IEC 15408</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="regions.html">Regions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="competitors.html">Competitors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manageengine.html">ManageEngine</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card shadow mb-5">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-4">
+                            <div class="icon-box mb-3">
+                                <i class="fas fa-lock fa-3x text-primary"></i>
+                            </div>
+                            <h1 class="display-5 fw-bold">Federal Information Processing Standard (FIPS) 140-2</h1>
+                            <p class="lead">Comprehensive Guide to FIPS 140-2 Compliance</p>
+                        </div>
+
+                        <h2>Introduction to FIPS 140-2</h2>
+                        <p>The Federal Information Processing Standard (FIPS) 140-2 is a U.S. government standard that specifies security requirements for cryptographic modules used to protect sensitive information. Developed by the National Institute of Standards and Technology (NIST), FIPS 140-2 was published in 2001 and serves as a critical benchmark for cryptographic security in both government and private sectors.</p>
+
+                        <h2>What Does FIPS 140-2 Compliance Mean?</h2>
+                        <p>FIPS 140-2 compliance means that a cryptographic module has been tested and validated by a NIST-approved laboratory to meet specific security requirements. These requirements ensure that the module correctly implements approved security functions, protects sensitive information, and operates in a secure manner. Compliance is essential for organizations that handle federal government data or operate in regulated industries such as healthcare and finance.</p>
+
+                        <h2>Key FIPS 140-2 Compliance Requirements</h2>
+                        
+                        <div class="card mb-4 border-primary">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="mb-0">1. Security Levels</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>FIPS 140-2 defines four increasing levels of security, each building upon the requirements of the previous level:</p>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card h-100">
+                                            <div class="card-header bg-success text-white">
+                                                <h4 class="mb-0">Level 1</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li>Basic security requirements for cryptographic modules</li>
+                                                    <li>Software-only cryptographic modules typically qualify at this level</li>
+                                                    <li>Requires the use of an approved algorithm</li>
+                                                    <li>No specific physical security mechanisms required beyond production-grade components</li>
+                                                    <li>Basic requirements for roles and services</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card h-100">
+                                            <div class="card-header bg-info text-white">
+                                                <h4 class="mb-0">Level 2</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li>Enhances Level 1 requirements with physical security mechanisms</li>
+                                                    <li>Requires role-based authentication</li>
+                                                    <li>Adds tamper-evident physical security mechanisms (e.g., coatings, seals)</li>
+                                                    <li>Requires an operating system that meets Common Criteria at EAL2</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card h-100">
+                                            <div class="card-header bg-warning text-dark">
+                                                <h4 class="mb-0">Level 3</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li>Adds robust physical security mechanisms to prevent access to critical security parameters</li>
+                                                    <li>Requires identity-based authentication</li>
+                                                    <li>Includes mechanisms to detect and respond to physical tampering attempts</li>
+                                                    <li>Requires separation between interfaces that input/output critical security parameters</li>
+                                                    <li>Requires an operating system that meets Common Criteria at EAL3</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card h-100">
+                                            <div class="card-header bg-danger text-white">
+                                                <h4 class="mb-0">Level 4</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li>Highest level of security</li>
+                                                    <li>Provides complete envelope of protection around the cryptographic module</li>
+                                                    <li>Detects and responds to all unauthorized physical access attempts</li>
+                                                    <li>Protects against environmental variations outside normal operating ranges</li>
+                                                    <li>Requires robust identity-based authentication</li>
+                                                    <li>Requires an operating system that meets Common Criteria at EAL4</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="card h-100 border-primary">
+                                    <div class="card-header bg-primary text-white">
+                                        <h3 class="mb-0">2. Cryptographic Module Specification</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>The cryptographic module must be specified clearly, including:</p>
+                                        <ul>
+                                            <li>Hardware, software, and firmware components</li>
+                                            <li>Module interfaces and boundaries</li>
+                                            <li>Approved modes of operation</li>
+                                            <li>Design architecture and documentation</li>
+                                            <li>Configuration management system</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 border-primary">
+                                    <div class="card-header bg-primary text-white">
+                                        <h3 class="mb-0">3. Module Ports and Interfaces</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>The module must control information flow through logical interfaces, categorized as:</p>
+                                        <ul>
+                                            <li>Data input interface</li>
+                                            <li>Data output interface</li>
+                                            <li>Control input interface</li>
+                                            <li>Status output interface</li>
+                                            <li>Power interface (if applicable)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="card h-100 border-primary">
+                                    <div class="card-header bg-primary text-white">
+                                        <h3 class="mb-0">4. Roles, Services, and Authentication</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>The module must support separate roles and services:</p>
+                                        <ul>
+                                            <li>Crypto Officer role for module initialization and management</li>
+                                            <li>User role for general security services</li>
+                                            <li>Authentication mechanisms appropriate to the security level</li>
+                                            <li>Clear separation between authenticated and unauthenticated services</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 border-primary">
+                                    <div class="card-header bg-primary text-white">
+                                        <h3 class="mb-0">5. Physical Security</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>Physical security requirements vary by level:</p>
+                                        <ul>
+                                            <li>Production-grade components (Level 1)</li>
+                                            <li>Tamper-evident coatings or seals (Level 2)</li>
+                                            <li>Tamper-detection and response mechanisms (Level 3)</li>
+                                            <li>Environmental failure protection (Level 4)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="card h-100 border-primary">
+                                    <div class="card-header bg-primary text-white">
+                                        <h3 class="mb-0">6. Operational Environment</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>For software modules, the operating environment must be specified:</p>
+                                        <ul>
+                                            <li>Operating system requirements</li>
+                                            <li>Protection of cryptographic software and keys</li>
+                                            <li>Memory management controls</li>
+                                            <li>Process isolation mechanisms</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 border-primary">
+                                    <div class="card-header bg-primary text-white">
+                                        <h3 class="mb-0">7. Cryptographic Key Management</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>Secure management of cryptographic keys throughout their lifecycle:</p>
+                                        <ul>
+                                            <li>Key generation, storage, and destruction</li>
+                                            <li>Key establishment protocols</li>
+                                            <li>Key usage policies</li>
+                                            <li>Key recovery mechanisms</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section added -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Shanmugavel ComplianceSpace</h5>
+                    <p>Comprehensive information on compliance frameworks and requirements.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Overview</a></li>
+                        <li><a href="comparison.html" class="text-white">Comparison</a></li>
+                        <li><a href="frameworks.html" class="text-white">Frameworks</a></li>
+                        <li><a href="regions.html" class="text-white">Regions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="competitors.html" class="text-white">Competitors</a></li>
+                        <li><a href="manageengine.html" class="text-white">ManageEngine</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2025 Shanmugavel ComplianceSpace. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

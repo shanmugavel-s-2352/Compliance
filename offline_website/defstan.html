@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEFSTAN Compliance Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/enhanced-styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .standard-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .standard-logo {
+            width: 60px;
+            height: 60px;
+            margin-right: 20px;
+            padding: 10px;
+            background: rgba(var(--primary-rgb), 0.1);
+            border-radius: 10px;
+        }
+        
+        .region-flag {
+            width: 30px;
+            height: 20px;
+            margin-left: 15px;
+            vertical-align: middle;
+            border-radius: 3px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .requirements-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9em;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .requirements-table thead tr {
+            background: var(--gradient-primary);
+            color: white;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        .requirements-table th,
+        .requirements-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #dddddd;
+        }
+        
+        .requirements-table tbody tr {
+            transition: all 0.3s ease;
+        }
+        
+        .requirements-table tbody tr:nth-of-type(even) {
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+        
+        .requirements-table tbody tr:hover {
+            background-color: rgba(var(--primary-rgb), 0.05);
+        }
+        
+        .requirements-table tbody tr:last-of-type {
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .implementation-steps {
+            counter-reset: step-counter;
+            margin: 30px 0;
+        }
+        
+        .step {
+            position: relative;
+            padding: 20px 20px 20px 70px;
+            margin-bottom: 15px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .step:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .step::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 36px;
+            height: 36px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .info-box {
+            background: rgba(var(--primary-rgb), 0.05);
+            border-left: 4px solid var(--primary-color);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .info-box h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-shield-alt me-2"></i>Shanmugavel ComplianceSpace</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#overview">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="comparison.html">Comparison</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Frameworks
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="taa.html">TAA</a></li>
+                            <li><a class="dropdown-item" href="fedramp.html">FedRAMP</a></li>
+                            <li><a class="dropdown-item" href="fips.html">FIPS 140-2</a></li>
+                            <li><a class="dropdown-item" href="cmmc.html">CMMC</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="itar.html">ITAR</a></li>
+                            <li><a class="dropdown-item" href="hipaa.html">HIPAA</a></li>
+                            <li><a class="dropdown-item" href="gdpr.html">GDPR</a></li>
+                            <li><a class="dropdown-item" href="nist800-53.html">NIST 800-53</a></li>
+                            <li><a class="dropdown-item" href="nist800-171.html">NIST 800-171</a></li>
+                            <li><a class="dropdown-item" href="disa-stigs.html">DISA STIGs</a></li>
+                            <li><a class="dropdown-item" href="pci-dss.html">PCI DSS</a></li>
+                            <li><a class="dropdown-item" href="enisa.html">ENISA</a></li>
+                            <li><a class="dropdown-item active" href="defstan.html">DEFSTAN</a></li>
+                            <li><a class="dropdown-item" href="iso15408.html">ISO/IEC 15408</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="regions.html">Regions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="competitors.html">Competitors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manageengine.html">ManageEngine</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="card shadow mb-5">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-4">
+                            <div class="icon-box mb-3">
+                                <i class="fas fa-shield-alt fa-3x text-primary"></i>
+                            </div>
+                            <h1 class="display-5 fw-bold">DEFSTAN Compliance</h1>
+                            <p class="lead">UK Defence Standards for Cybersecurity and Product Security</p>
+                        </div>
+
+                        <div class="standard-header">
+                            <img src="images/compliance_icon.svg" alt="DEFSTAN Logo" class="standard-logo">
+                            <div>
+                                <h2>DEFSTAN <img src="images/flags/uk.svg" alt="United Kingdom" class="region-flag"></h2>
+                                <p>UK Defence Standards</p>
+                            </div>
+                        </div>
+                        
+                        <h3>What are Defence Standards (DEFSTAN)?</h3>
+                        <p>Defence Standards, commonly known as DEFSTAN, are a series of standards developed by the UK Ministry of Defence (MOD) to help standardize equipment and processes used by the UK Armed Forces. These standards cover a wide range of areas, including cybersecurity, product safety, quality management, and technical specifications for defence equipment and services.</p>
+                        
+                        <div class="info-box">
+                            <h4>Key Facts About DEFSTAN</h4>
+                            <ul>
+                                <li><strong>Governing Body:</strong> UK Ministry of Defence</li>
+                                <li><strong>Primary Region:</strong> United Kingdom</li>
+                                <li><strong>Legal Authority:</strong> Contractual requirements for UK defence procurement</li>
+                                <li><strong>Compliance Requirement:</strong> Mandatory for suppliers to the UK MOD and defence sector</li>
+                                <li><strong>Focus Areas:</strong> Cybersecurity, product security, quality assurance, technical specifications</li>
+                            </ul>
+                        </div>
+                        
+                        <h3>Key DEFSTAN Standards for Cybersecurity</h3>
+                        <p>Several Defence Standards are particularly relevant for cybersecurity and IT product compliance:</p>
+                        
+                        <table class="requirements-table">
+                            <thead>
+                                <tr>
+                                    <th>Standard</th>
+                                    <th>Title</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>DEFSTAN 05-138</td>
+                                    <td>Cyber Security for Defence Suppliers</td>
+                                    <td>Defines cybersecurity requirements for defence suppliers, aligned with the UK's Cyber Assessment Framework (CAF)</td>
+                                </tr>
+                                <tr>
+                                    <td>DEFSTAN 00-055</td>
+                                    <td>Requirements for Security of Electronic Data Systems</td>
+                                    <td>Specifies security requirements for electronic data systems handling classified information</td>
+                                </tr>
+                                <tr>
+                                    <td>DEFSTAN 05-135</td>
+                                    <td>Cyber Security for Military Systems</td>
+                                    <td>Provides requirements for cybersecurity in military systems and equipment</td>
+                                </tr>
+                                <tr>
+                                    <td>DEFSTAN 23-009</td>
+                                    <td>Generic Vehicle Architecture (GVA)</td>
+                                    <td>Includes security requirements for vehicle electronic systems</td>
+                                </tr>
+                                <tr>
+                                    <td>DEFSTAN 00-056</td>
+                                    <td>Safety Management Requirements for Defence Systems</td>
+                                    <td>Includes security considerations for safety-critical systems</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <!-- ... existing content ... -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section added -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Shanmugavel ComplianceSpace</h5>
+                    <p>Comprehensive information on compliance frameworks and requirements.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Overview</a></li>
+                        <li><a href="comparison.html" class="text-white">Comparison</a></li>
+                        <li><a href="frameworks.html" class="text-white">Frameworks</a></li>
+                        <li><a href="regions.html" class="text-white">Regions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="competitors.html" class="text-white">Competitors</a></li>
+                        <li><a href="manageengine.html" class="text-white">ManageEngine</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2025 Shanmugavel ComplianceSpace. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
